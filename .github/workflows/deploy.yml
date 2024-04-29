@@ -8,7 +8,6 @@ jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
-    container: centos-latest
     steps:
       - uses: actions/checkout@v4
 
