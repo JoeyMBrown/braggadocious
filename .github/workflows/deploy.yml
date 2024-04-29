@@ -7,7 +7,8 @@ on:
 jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
-    runs-on: centos-latest
+    runs-on: ubuntu-latest
+    container: centos-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -20,7 +21,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 8.2
-          extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
+          extensions: php-cli, php-common, php-fpm, php-mysql, php-zip, php-gd, php-mbstring, php-curl, php-xml, php-bcmath, openssl, php-json, php-tokenizer
 
       - name: Composer install
         run: |
