@@ -3,6 +3,7 @@ name: Deploy Application
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   create-deployment-artifacts:
@@ -62,7 +63,7 @@ jobs:
             echo "$JSON" >> "${GITHUB_OUTPUT}"
             echo "${delimiter}" >> "${GITHUB_OUTPUT}"
 
-    # Prepare release on all servers, waits untill create-deployment-artifacts has finished.
+    # Prepare release on all servers, waits untill create-deployment-artifacts has finished
   prepare-release-on-servers:
     name: "${{ matrix.server.name }}: Prepare release"
     runs-on: ubuntu-latest
