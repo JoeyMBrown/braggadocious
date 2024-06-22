@@ -1,0 +1,11 @@
+[
+    {
+      "name": "braggadocious_server",
+      "ip": "45.55.139.35",
+      "username": "joey",
+      "password":"some_password",
+      "beforeHooks": "",
+      "afterHooks": "",
+      "path": "/var/www/html"
+    }
+  ]
